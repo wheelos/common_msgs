@@ -15,6 +15,13 @@ cc_proto_library(
 proto_library(
     name = "chassis_proto",
     srcs = ["chassis.proto"],
+    deps = [
+        "//common_msgs/basic_msgs:drive_state_proto",
+        "//common_msgs/basic_msgs:geometry_proto",
+        "//common_msgs/basic_msgs:header_proto",
+        "//common_msgs/basic_msgs:vehicle_id_proto",
+        "//common_msgs/basic_msgs:vehicle_signal_proto",
+    ],
 )
 
 cc_proto_library(
@@ -27,4 +34,9 @@ cc_proto_library(
 proto_library(
     name = "chassis_detail_proto",
     srcs = ["chassis_detail.proto"],
+    deps = [
+        "//common_msgs/basic_msgs:vehicle_id_proto",
+        ":chassis_proto",
+    ],
 )
+

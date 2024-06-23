@@ -6,15 +6,15 @@ load("@rules_cc//cc:defs.bzl", "cc_proto_library")
 package(default_visibility = ["//visibility:public"])
 
 cc_proto_library(
-    name = "header_cc_proto",
+    name = "direction_cc_proto",
     deps = [
-        ":header_proto",
+        ":direction_proto",
     ],
 )
 
 proto_library(
-    name = "header_proto",
-    srcs = ["header.proto"],
+    name = "direction_proto",
+    srcs = ["direction.proto"],
 )
 
 cc_proto_library(
@@ -30,39 +30,15 @@ proto_library(
 )
 
 cc_proto_library(
-    name = "direction_cc_proto",
+    name = "error_code_cc_proto",
     deps = [
-        ":direction_proto",
+        ":error_code_proto",
     ],
 )
 
 proto_library(
-    name = "direction_proto",
-    srcs = ["direction.proto"],
-)
-
-cc_proto_library(
-    name = "drive_event_cc_proto",
-    deps = [
-        ":drive_event_proto",
-    ],
-)
-
-proto_library(
-    name = "drive_event_proto",
-    srcs = ["drive_event.proto"],
-)
-
-cc_proto_library(
-    name = "geometry_cc_proto",
-    deps = [
-        ":geometry_proto",
-    ],
-)
-
-proto_library(
-    name = "geometry_proto",
-    srcs = ["geometry.proto"],
+    name = "error_code_proto",
+    srcs = ["error_code.proto"],
 )
 
 cc_proto_library(
@@ -90,6 +66,33 @@ proto_library(
 )
 
 cc_proto_library(
+    name = "header_cc_proto",
+    deps = [
+        ":header_proto",
+    ],
+)
+
+proto_library(
+    name = "header_proto",
+    srcs = ["header.proto"],
+    deps = [
+        ":error_code_proto",
+    ],
+)
+
+cc_proto_library(
+    name = "geometry_cc_proto",
+    deps = [
+        ":geometry_proto",
+    ],
+)
+
+proto_library(
+    name = "geometry_proto",
+    srcs = ["geometry.proto"],
+)
+
+cc_proto_library(
     name = "drive_state_cc_proto",
     deps = [
         ":drive_state_proto",
@@ -101,14 +104,3 @@ proto_library(
     srcs = ["drive_state.proto"],
 )
 
-cc_proto_library(
-    name = "error_code_cc_proto",
-    deps = [
-        ":error_code_proto",
-    ],
-)
-
-proto_library(
-    name = "error_code_proto",
-    srcs = ["error_code.proto"],
-)
