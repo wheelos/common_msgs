@@ -2,8 +2,8 @@ syntax = "proto2";
 
 package apollo.canbus;
 
-import "modules/common_msgs/basic_msgs/vehicle_id.proto";
-import "modules/common_msgs/chassis_msgs/chassis.proto";
+import "common_msgs/basic_msgs/vehicle_id.proto";
+import "common_msgs/chassis_msgs/chassis.proto";
 
 
 message ChassisDetail {

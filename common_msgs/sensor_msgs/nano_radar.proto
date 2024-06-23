@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package apollo.drivers;
 
-import "modules/common_msgs/basic_msgs/header.proto";
+import "common_msgs/basic_msgs/header.proto";
 
 message NanoObjectListStatus_60A {
   optional int32 nof_objects = 1 [default = 0];
@@ -19,13 +19,13 @@ message NanoRadarState_201 {
     OUTPUT_TYPE_CLUSTERS = 2;
     OUTPUT_TYPE_ERROR = 3;
   }
-  
+
   enum RcsThreshold {
     RCS_THRESHOLD_STANDARD = 0;
     RCS_THRESHOLD_HIGH_SENSITIVITY = 1;
     RCS_THRESHOLD_ERROR = 2;
   }
-  
+
   optional uint32 max_distance = 1;
   optional uint32 radar_power = 2;
   optional OutputType output_type = 3;

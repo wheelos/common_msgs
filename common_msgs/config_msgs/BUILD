@@ -2,6 +2,7 @@
 load("@rules_proto//proto:defs.bzl", "proto_library")
 load("@rules_cc//cc:defs.bzl", "cc_proto_library")
 
+
 package(default_visibility = ["//visibility:public"])
 
 cc_proto_library(
@@ -14,4 +15,10 @@ cc_proto_library(
 proto_library(
     name = "vehicle_config_proto",
     srcs = ["vehicle_config.proto"],
+    deps = [
+        "//common_msgs/basic_msgs:header_proto",
+        "//common_msgs/basic_msgs:geometry_proto",
+        "//common_msgs/basic_msgs:vehicle_id_proto",
+    ],
 )
+

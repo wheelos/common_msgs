@@ -2,9 +2,9 @@ syntax = "proto2";
 
 package apollo.common;
 
-import "modules/common_msgs/basic_msgs/header.proto";
-import "modules/common_msgs/basic_msgs/geometry.proto";
-import "modules/common_msgs/basic_msgs/vehicle_id.proto";
+import "common_msgs/basic_msgs/header.proto";
+import "common_msgs/basic_msgs/geometry.proto";
+import "common_msgs/basic_msgs/vehicle_id.proto";
 
 message Transform {
   optional bytes source_frame = 1;  // Also known as "frame_id."

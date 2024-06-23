@@ -2,8 +2,8 @@ syntax = "proto2";
 
 package apollo.drivers.gnss;
 
-import "modules/common_msgs/basic_msgs/geometry.proto";
-import "modules/common_msgs/basic_msgs/header.proto";
+import "common_msgs/basic_msgs/geometry.proto";
+import "common_msgs/basic_msgs/header.proto";
 
 // Solution from a Global Navigation Satellite System (GNSS) receiver without
 // fused with any IMU.
