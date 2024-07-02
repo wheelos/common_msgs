@@ -1,5 +1,5 @@
 module(
-    name = "common_msgs",
+    name = "wheelos_common_msgs",
     version = "0.1.2",
     compatibility_level = 1,
 )
